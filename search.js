@@ -6,36 +6,45 @@ var mongoose = require('mongoose')
 var tweetModel = require('./app/models/tweet.js')
 var params = { 
   q: 'collaborate',
-  count: 100 
+  count: 10 
 }
 
-T.get('search/tweets', params, searchedData);
+T.get('search/tweets', params, storeData);
 
-function searchedData(err, data, response) {
+function storeData(err, data, response) {
   //console.log(data);
 
-  //for (i = 0; i < data.statuses.length; i++) {
-    console.log(data.statuses[0].text)
+  for (i = 0; i < data.statuses.length; i++) {
+    //console.log(data.statuses[i].text)
 
     var oneTweet = new tweetModel
-    oneTweet.text = data.statuses[0].text
+    oneTweet.text = data.statuses[i].text
 
     oneTweet.save(function(err) {
       if(err) console.log(err)
     })
 
-    // tweetModel.create({
-    //   text: data.statuses[0].text
-    // }, function(err, data){
-    //   if (err) {
-    //     console.log(err)
-    //   }
-    //   console.log(data.text)
-    // });
+  }
+  //debug
+  console.log('we store data')
 
-  //}
+
 }
 
+//This function searches the tweets and returns results 
+
+function searchData(name, callback) {
+  console.log('searched the data')
+
+  tweetModel.find({text: {"$regex": name, "$options":"i"}}, function(err, data){
+    if (err) {callback(err)}
+    callback(data)
+  })
+  //debug
+}
+
+
+//functions available to other files
 module.exports = {
-  searchedData: searchedData
+  searchData: searchData
 };

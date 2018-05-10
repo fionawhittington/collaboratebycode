@@ -4,7 +4,7 @@ var config = require('./config')
 var T = new Twit(config);
 
 var tweet = { 
-  status: 'hello world!!'+ Math.random() 
+ status: 'hello world!!'+ Math.random() 
 }
 
 T.post('statuses/update', tweet, tweeted)

@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css?family=Overpass:400,900');
+
 #canvas {
     position:absolute;
     background-image: url(../img/square.png);
@@ -12,16 +15,14 @@ body {
 
 header .navbar {
   border-radius: 0;
-  margin: 0;
-}
+  margin: 0;}
 
 .hero {
-  background-image: url(../img/wood.png);
+  background-color:white;
   background-repeat: no-repeat;;
   background-size: cover;
   background-position: center center;
   padding: 50px 0;
-  min-height: 650px;
   position: relative;
 }
 
@@ -33,19 +34,28 @@ header .navbar {
 }
 
 .hero-content h2 {
-  color: #FFF;
+  color: black;
   font-size: 80px;
+  font-weight:900;
+  font-family: 'Overpass', sans-serif;
+
 }
 
 .hero-content p {
-  color: #FFF;
-  font-size: 40px;
+  color: black;
+  font-size: 22px;
   margin-bottom: 30px;
+  font-family: 'Overpass', sans-serif;
 }
 
 .hero-content .btn {
   border-radius: 2px;
   padding: 20px 30px;
+  background-color:#CC0000;
+  border-radius:12px;
+  font-family: 'Overpass', sans-serif;
+  border:#CC0000;
+
 }  
 
 main {
