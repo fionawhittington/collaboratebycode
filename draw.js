@@ -2,7 +2,7 @@ console.log("Shapes is up now..")
 var mongoose = require('mongoose')
 var shapesModel = require('./app/models/shapes')
 
-console.log(shapesModel )
+console.log(shapesModel)
 
 // function drawData(data){
 

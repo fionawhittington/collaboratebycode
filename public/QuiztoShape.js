@@ -1,12 +1,9 @@
-
 shapeToDraw = "shapez"
 shapeLine = "linez"
 shapeColor = "colorz"
 
 function draw() {
-    clear()
-    //ellipse(240, 240, 80, 80);
-    //returnShape(0);
+    clear();
     switch (shapeToDraw) {
         case "circle":
             ellipse(50, 50, 80, 80)
@@ -51,4 +48,5 @@ function draw() {
             fill('black')
             break;
     }
+    
 }
