@@ -1,0 +1,23 @@
+{
+  "name": "node-site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node twitter-example.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Fiona Whittington",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "canvas": "^1.6.10",
+    "ejs": "^2.5.1",
+    "express": "^4.14.0",
+    "express-ejs-layouts": "^2.2.0",
+    "mongoose": "^5.0.9",
+    "node-import": "^0.9.2",
+    "nodemon": "^1.10.2",
+    "twit": "^2.2.9"
+  }
+}
