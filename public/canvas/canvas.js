@@ -18,6 +18,17 @@ function setup() {
 //     resizeCanvas(windowWidth, windowHeight);
 // }
 
+
+$.get("/draw", function(data) {
+    bullshitFn(data)
+    draw(data)
+});
+
+$.get("/quiz", function(drawData) {
+    draw(dataToSend)
+});
+
+
 function draw(attributeToSend){
     if (typeof attributeToSend !== 'undefined') {
         console.log(attributeToSend)
@@ -34,12 +45,3 @@ function draw(attributeToSend){
 
     }
 }
-
-$.get("/draw", function(data) {
-    bullshitFn(data)
-    draw(data)
-});
-
-$.get("/quiz", function(drawData) {
-    draw(drawData)
-});

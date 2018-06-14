@@ -2,17 +2,21 @@
 <div class ="container">
     <div class ="row">
 
-        <div class ="col-md-8 col-md-offset-2">
+        <div class ="col-md-8">
 
-            <form id = "quiz" name = "quiz" onchange = "myFunction(); check();">
+            <form id = "quiz" name = "quiz" onchange = "check();">
 
 
             <p class = "questions">What type of environment do you live in?</p>
 
             <div class ="options">
-                <input class ="radio-inline" type = "radio" id = "mc11" name = "question1" value = "Urban"> Urban <br>
-                <input class ="radio-inline" type = "radio" id = "mc12" name = "question1" value = "Rural"> Rural <br>
-                <input class ="radio-inline" type = "radio" id = "mc13" name = "question1" value = "Suburban"> Suburban <br>
+
+                <input class ="radio-inline option" type = "radio" id = "mc11" name = "question1" value = "Urban"> Urban <span class="code">quad(x1, y1, x2, y2, x3, y3, x4, y4)</span><br>
+
+                <input class ="radio-inline option" type = "radio" id = "mc12" name = "question1" value = "Rural"> Rural <span class="code">triangle(x1, y1, x2, y2, x3, y3)</span><br>
+
+                <input class ="radio-inline option" type = "radio" id = "mc13" name = "question1" value = "Suburban"> Suburban <span class="code">rect(x, y, width, height)</span><br>
+
             </div>
 
 
@@ -39,7 +43,7 @@
 
 
 
-            <input id = "tweet-this-post button" class ="tweet-post-class" type = "button" value = "I'm finished!" onclick = "check();"> 
+            <input id = "tweet-this-post button" class ="tweet-post-class" type = "button" value = "Next" onclick = "check();"> 
 
             <!--<a class="twitter-share-button"
                 via="@redhat"
@@ -69,8 +73,8 @@
 <!-- Quiz Styling -->
 <link rel="stylesheet" href="/css/quiz.css">
 
-<script language="javascript" type="text/javascript" src="quiztoshape.js"></script>
 <script src="/quiz/index.js"></script>
+<!-- <script src="../helper/quiztoshape.js"></script> -->
 <script src="/quiz/p5.min.js"></script>
 <script language="javascript" type="text/javascript" src="quiz/p5.dom.js"></script>
 

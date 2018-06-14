@@ -3,6 +3,7 @@ function setup() {
     // positions canvas 50px to the right and 100px
     // below upper left corner of the window
     cnv.position(1000, 300);
+    background(176, 155, 204);
 } 
 
 // function returnShape(num) {
@@ -83,6 +84,7 @@ function check(){
         "q3": question3,
     }
 
+
     var attributeToSend = {
         "q1": shapeToDraw,
         "q2": shapeLine,
@@ -106,7 +108,8 @@ function check(){
         console.log(returnn);
     });
 
-    draw();
+
+    quiztoshape();
 
     // app.post("/quiz", dataToSend, function(returnn) {
     //     var dataToSend = new shapes(req.body);

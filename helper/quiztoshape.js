@@ -2,7 +2,20 @@ shapeToDraw = "shapez"
 shapeLine = "linez"
 shapeColor = "colorz"
 
-function draw() {
+console.log("This is a shape that should be drawn")
+
+console.log(shapeToDraw)
+
+function setup() { 
+    var cnv = createCanvas(500, 100);
+    // positions canvas 50px to the right and 100px
+    // below upper left corner of the window
+    cnv.position(1200, 1000);
+    background(176, 155, 204);
+} 
+
+
+function quiztoshape() {
     clear();
     switch (shapeToDraw) {
         case "circle":
@@ -50,3 +63,5 @@ function draw() {
     }
     
 }
+
+// module.exports = quiztoshape;
