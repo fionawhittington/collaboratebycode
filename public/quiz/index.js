@@ -1,10 +1,14 @@
+const shapeBuilder = require('../../helper/quiztoshape');
+
 function setup() { 
     var cnv = createCanvas(500, 500);
     // positions canvas 50px to the right and 100px
     // below upper left corner of the window
     cnv.position(1000, 300);
     background(176, 155, 204);
-} 
+}
+
+shapeBuilder.setup //  this is the same function as the above 'setup' function
 
 // function returnShape(num) {
 //     shapes = [quad(38, 31, 86, 20, 69, 63, 30, 76), ellipse(50, 50, 80, 80), rect(40, 120, 120, 40)]
