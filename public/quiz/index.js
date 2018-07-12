@@ -1,4 +1,14 @@
-const shapeBuilder = require('../../helper/quiztoshape');
+if (typeof define !== 'function') { var define = require('amdefine')(module) }
+
+define(function(require) {
+    var dep = require('./helper/quiztoshape');
+
+    //The value returned from the function is
+    //used as the module export visible to Node.
+    return function () {};
+});
+
+const shapeBuilder = require('./helper/quiztoshape');
 
 function setup() { 
     var cnv = createCanvas(500, 500);
@@ -8,7 +18,7 @@ function setup() {
     background(176, 155, 204);
 }
 
-shapeBuilder.setup //  this is the same function as the above 'setup' function
+shapeBuilder.setup() //  this is the same function as the above 'setup' function
 
 // function returnShape(num) {
 //     shapes = [quad(38, 31, 86, 20, 69, 63, 30, 76), ellipse(50, 50, 80, 80), rect(40, 120, 120, 40)]
@@ -16,7 +26,11 @@ shapeBuilder.setup //  this is the same function as the above 'setup' function
 //     return shapes[num]
 // }
 
+
+
 function check(){
+
+    // drawing a shape on quiz page
 
     var question1 = document.quiz.question1.value;
     var question2 = document.quiz.question2.value;
@@ -113,7 +127,7 @@ function check(){
     });
 
 
-    quiztoshape();
+    shapeBuilder.draw();
 
     // app.post("/quiz", dataToSend, function(returnn) {
     //     var dataToSend = new shapes(req.body);

@@ -15,7 +15,7 @@ function setup() {
 } 
 
 
-function quiztoshape() {
+function draw() {
     clear();
     switch (shapeToDraw) {
         case "circle":
@@ -64,13 +64,13 @@ function quiztoshape() {
     
 }
 
-module.exports = {
-    setup,
-    quiztoshape, // key value pairs with the same name can be referenced with one name
-    // For example:
-    // var dog = 'Dog';
-    // var testObject = {
-    //    dog, 
-    //};
-    // console.log(testObject.dog) <---- outputs 'Dog'
-}
+// module.exports = {
+//     setup,
+//     quiztoshape, // key value pairs with the same name can be referenced with one name
+//     // For example:
+//     // var dog = 'Dog';
+//     // var testObject = {
+//     //    dog, 
+//     //};
+//     // console.log(testObject.dog) <---- outputs 'Dog'
+// }

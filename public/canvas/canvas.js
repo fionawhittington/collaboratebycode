@@ -1,3 +1,27 @@
+// 
+//
+// need functions:
+// get_all shapes
+// draw_all shapes (calls draw from index.js)
+// 
+//
+//
+
+
+// function get_all_shapes() {
+//     var all_answers = mongodb.all_answers();
+//     var all_shapes = quiztoShape(all_answers);
+//     return all_shapes;
+// }
+
+// function draw_all_shapes() {
+//     var all_shapes = get_all_shapes();
+//     for shape in all_shapes {
+//         shapeBuilder.draw(shape)
+//     }
+// }
+
+
 
 function bullshitFn(varriable) {
     console.log(varriable)
@@ -32,7 +56,7 @@ $.get("/quiz", function(drawData) {
 function draw(attributeToSend){
     if (typeof attributeToSend !== 'undefined') {
         console.log(attributeToSend)
-        draw();
+        
 
         // for (i = 0; i < quizData.length; i++) {
        

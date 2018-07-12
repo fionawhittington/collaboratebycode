@@ -7,7 +7,7 @@ var router = express.Router();
 
 var mongoose = require('mongoose');
 
-var shape = require('./models/shapes');
+var Shape = require('./models/shapes');
 
 // route for our homepage
 router.get('/', function(req, res) {
