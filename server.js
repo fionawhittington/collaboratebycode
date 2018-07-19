@@ -14,7 +14,7 @@ var postTweet = require('./post-tweet');
 var search = require('./search');
 
 //Do I need this?
-var drawShape = require('./helper/drawShape');
+// var drawShape = require('./helper/drawShape');
 var quizToShape = require('./helper/quizToShape');
 
 var app = express();

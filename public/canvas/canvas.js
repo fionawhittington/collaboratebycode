@@ -89,6 +89,7 @@ function drawShapes(shapeData){
             } else {
                 shape.scale += (1 - shape.scale) * 0.025;    
             }
+            
         });
         
     }).play();

@@ -1,4 +1,64 @@
+// Make an instance of two and place it on the page.
+// WARNING - For now, at least, these need to be in the global space
+// Several functions rely on them
+var elem = document.getElementById('draw-shapes');
+var twoParams = {
+    width: 100,
+    height: 200
+};
 
+var two = new Two(twoParams).appendTo(elem);
+
+function quizToShape(answer) {
+    console.log('here')
+    // var position = calculateShapePosition(index);
+
+    // var shapeMethod = {
+    //     'Rural': new Two.Ellipse(50, 50, 20, 20),
+    //     'Urban': new Two.Polygon(50, 50, 20, 5),
+    //     'Suburban': new Two.Rectangle(50, 50, 20, 20)
+    // }
+
+    if (question1 == "Urban") {
+        var shapeMethod = new Two.Polygon(50, 50, 20, 5)
+    }
+
+    // var fillColor = {
+    //     'Employee': 'blue',
+    //     'Customer': 'orangered',
+    //     'Other': 'grey'
+    // };
+
+    // var strokeWidth = {
+    //     'Asia': 1,
+    //     'South America': 2,
+    //     'North America': 3,
+    //     'Australia': 4,
+    //     'Antartica': 5,
+    //     'Europe': 6,
+    //     'Africa': 7
+    // };
+
+    var shape = shapeMethod[answer.q1];
+    // console.log(shape);
+    // shape.fill = fillColor[answer];
+    // shape.linewidth = strokeWidth[answer];
+
+    two.add(shape);
+    two.update();
+}
+
+
+// // Removes any answer objects that lack an answer for any of the questions
+function removeUndefined(answer) {
+    return !!answer.q1 || !!answer.q2 || !!answer.q3;
+}
+
+// function drawShapes(shapeData){
+
+//     two.add(shape);
+//     two.update();
+// }
 
 // if (typeof define !== 'function') { var define = require('amdefine')(module) }
 
