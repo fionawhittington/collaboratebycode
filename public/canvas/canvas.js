@@ -1,3 +1,4 @@
+
 // Make an instance of two and place it on the page.
 // WARNING - For now, at least, these need to be in the global space
 // Several functions rely on them
@@ -30,6 +31,8 @@ function calculateNumOfShapesPerRow() {
 
 function answerToShape(answer, index) {
     var position = calculateShapePosition(index);
+
+    console.log("shit");
 
     var shapeMethod = {
         'Rural': new Two.Ellipse(position.x, position.y, 20, 20),

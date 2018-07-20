@@ -14,9 +14,9 @@ var two = new Two(twoParams).appendTo(elem);
 // var shapeWidth = (twoParams.width / numOfShapesPerRow) - 5;
 
 // Pull down answers from the backend
-$.get("/draw", function(data) {
-    drawShapes(data);
-});
+// $.get("/draw", function(data) {
+//     drawShapes(data);
+// });
 
 
 // function calculateCanvasWidth() {

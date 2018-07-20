@@ -1,3 +1,21 @@
+input[type=radio] + label {
+  color: black;
+  background-color: white;
+  padding-left:5px;
+  font-weight:lighter;
+} 
+input[type=radio]:checked + label {
+  background-color: orange;
+  font-style: italic;
+  width: 100%;
+  color: white;
+  padding-left:5px;
+  font-weight:lighter;
+} 
+
+input[type="button"] {
+  margin-bottom:50px;
+}
 
 body {
   font-family: 'Lato', sans-serif;
@@ -74,6 +92,7 @@ p.questions {
   cursor: pointer;
 
 }
+
 
 #after_submit {
   visibility: hidden;

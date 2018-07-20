@@ -1,5 +1,5 @@
 
-<div class ="container">
+<div class ="container-fluid purpleGradient">
 
     <div class ="row">
 
@@ -7,52 +7,108 @@
 
             <form id = "quiz" name = "quiz">
 
+                <div style="padding-bottom:100px" id="current">
+                
+                    <p class = "questions">What type of environment do you live in?</p>
 
-                <p class = "questions">What type of environment do you live in?</p>
+                    <div class ="options">
 
-                <div class ="options">
+                        <input class ="radio-inline option" type = "radio" id = "mc11" name = "question1" value = "Urban"> 
 
-                    <input class ="radio-inline option" type = "radio" id = "mc11" name = "question1" value = "Urban"> Urban <span class="code">quad(x1, y1, x2, y2, x3, y3, x4, y4)</span><br>
+                        <label for="ossm">Urban</label> <br>
 
-                    <input class ="radio-inline option" type = "radio" id = "mc12" name = "question1" value = "Rural"> Rural <span class="code">triangle(x1, y1, x2, y2, x3, y3)</span><br>
+                        <input class ="radio-inline option" type = "radio" id = "mc11" name = "question1" value = "Rural"> 
 
-                    <input class ="radio-inline option" type = "radio" id = "mc13" name = "question1" value = "Suburban"> Suburban <span class="code">rect(x, y, width, height)</span><br>
+                        <label for="ossm">Rural</label> <br>
+
+                        <input class ="radio-inline option" type = "radio" id = "mc11" name = "question1" value = "Suburban"> 
+                        <!-- Urban <span class="code">quad(x1, y1, x2, y2, x3, y3, x4, y4)</span><br> -->
+                        <label for="ossm">Suburban</label> <br>
+
+                    </div>
+
+                    <input type = "button" value = "Next" onclick="check(); updateStep();"> 
 
                 </div>
 
+                <div style="padding-bottom:100px" id="current">
+                
 
-                <p class = "questions"> What is your affiliation to Red Hat? </p>
+                    <p class = "questions"> What is your affiliation to Red Hat? </p>
 
-                <div class ="options">
-                    <input class ="radio-inline option" type = "radio" id = "mc21" name = "question2" value = "Employee"> Employee <br>
-                    <input class ="radio-inline" type = "radio" id = "mc22" name = "question2" value = "Customer"> Customer <br>
-                    <input class ="radio-inline" type = "radio" id = "mc23" name = "question2" value = "Other"> Other <br>
+                    <div class ="options">
+
+                        <input class ="radio-inline option" type = "radio" id = "mc11" name = "question2" value = "Employee"> 
+                        <!-- Urban <span class="code">quad(x1, y1, x2, y2, x3, y3, x4, y4)</span><br> -->
+                        <label for="ossm">Employee</label> <br>
+
+
+                        <input class ="radio-inline option" type = "radio" id = "mc11" name = "question2" value = "Customer"> 
+                        <!-- Urban <span class="code">quad(x1, y1, x2, y2, x3, y3, x4, y4)</span><br> -->
+                        <label for="ossm">Customer</label> <br>
+
+                        <input class ="radio-inline option" type = "radio" id = "mc11" name = "question2" value = "Other"> 
+                        <!-- Urban <span class="code">quad(x1, y1, x2, y2, x3, y3, x4, y4)</span><br> -->
+                        <label for="ossm">Other</label> <br>
+                    </div>
+
+                    <input type = "button" value = "Next" onclick="check(); updateStep();"> 
+
                 </div>
 
+                <div style="padding-bottom:100px">
+                
+                    <p class = "questions">Which continent are you from?</p>
 
-                <p class = "questions">Which continent are you from?</p>
+                    <div class ="options">
 
-                <div class ="options">
-                    <input class ="radio-inline" type = "radio" id = "mc31" name = "question3" value = "Asia"> Asia<br>
-                    <input class ="radio-inline" type = "radio" id = "mc32" name = "question3" value = "Australia"> Australia<br>
-                    <input class ="radio-inline" type = "radio" id = "mc33" name = "question3" value = "Antartica"> Antartica<br>
-                    <input class ="radio-inline" type = "radio" id = "mc34" name = "question3" value = "Europe"> Europe<br>
-                    <input class ="radio-inline" type = "radio" id = "mc35" name = "question3" value = "Asia"> Asia<br>
-                    <input class ="radio-inline" type = "radio" id = "mc36" name = "question3" value = "North America"> North America<br>
-                    <input class ="radio-inline" type = "radio" id = "mc37" name = "question3" value = "South America"> South America<br>
+                        <input class ="radio-inline option" type = "radio" id = "mc11" name = "question3" value = "Other"> 
+                        <!-- Urban <span class="code">quad(x1, y1, x2, y2, x3, y3, x4, y4)</span><br> -->
+                        <label for="ossm">Asia</label> <br>
+
+                         <input class ="radio-inline option" type = "radio" id = "mc11" name = "question3" value = "Australia"> 
+                        <!-- Urban <span class="code">quad(x1, y1, x2, y2, x3, y3, x4, y4)</span><br> -->
+                        <label for="ossm">Australia</label> <br>
+
+                        <input class ="radio-inline option" type = "radio" id = "mc11" name = "question3" value = "Antarctica"> 
+                        <!-- Urban <span class="code">quad(x1, y1, x2, y2, x3, y3, x4, y4)</span><br> -->
+                        <label for="ossm">Antarctica</label> <br>
+
+                        <input class ="radio-inline option" type = "radio" id = "mc11" name = "question3" value = "Europe"> 
+                        <!-- Urban <span class="code">quad(x1, y1, x2, y2, x3, y3, x4, y4)</span><br> -->
+                        <label for="ossm">Europe</label> <br>
+
+                        <input class ="radio-inline option" type = "radio" id = "mc11" name = "question3" value = "North America"> 
+                        <!-- Urban <span class="code">quad(x1, y1, x2, y2, x3, y3, x4, y4)</span><br> -->
+                        <label for="ossm">North America</label> <br>
+
+                        <input class ="radio-inline option" type = "radio" id = "mc11" name = "question3" value = "Asia"> 
+                        <!-- Urban <span class="code">quad(x1, y1, x2, y2, x3, y3, x4, y4)</span><br> -->
+                        <label for="ossm">Asia</label> <br>
+
+                        <input class ="radio-inline option" type = "radio" id = "mc11" name = "question3" value = "South America"> 
+                        <!-- Urban <span class="code">quad(x1, y1, x2, y2, x3, y3, x4, y4)</span><br> -->
+                        <label for="ossm">South America</label> <br>
+
+                    </div>
+
+                    <input type = "button" value = "Next" onclick="check();"> 
+
                 </div>
-
-                <input type = "button" value = "Next" onchange="quizToShape();"> 
 
             </form>
 
         </div>
 
-    </div>
+        <div class ="col-md-2">
 
-    <div class="shape-scroll">
+            <div class="shape-scroll">
 
-        <div id="draw-shapes"></div>
+                <div id="draw-shapes"></div>
+
+            </div>
+
+        </div>
 
     </div>
 
@@ -60,4 +116,4 @@
 
 <!-- Quiz Styling -->
 <link rel="stylesheet" href="/css/quiz.css">
-<script src="/quiz/quiz.js"></script>
+<script type="text/javascript" src="/quiz/scrap2.js"></script>
