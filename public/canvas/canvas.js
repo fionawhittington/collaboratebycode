@@ -32,8 +32,6 @@ function calculateNumOfShapesPerRow() {
 function answerToShape(answer, index) {
     var position = calculateShapePosition(index);
 
-    console.log("shit");
-
     var shapeMethod = {
         'Rural': new Two.Ellipse(position.x, position.y, 20, 20),
         'Urban': new Two.Polygon(position.x, position.y, 20, 5),
