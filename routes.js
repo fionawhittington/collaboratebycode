@@ -1,13 +1,14 @@
-// require express
 var express = require('express');
 var path    = require('path'); 
-
-// create our router object
+var mongoose = require('mongoose');
+var Shape = require('./models/shapes');
 var router = express.Router();
 
-var mongoose = require('mongoose');
-
-var Shape = require('./models/shapes');
+// Keeping this empty middleware to use as an example
+router.use(function(req, res, next) {
+	// middleware logic goes here - logging, authentication, etc.
+	next(); // make sure we go to the next routes and don't stop here
+});
 
 // route for our homepage
 router.get('/', function(req, res) {
@@ -40,42 +41,20 @@ router.get('/canvas', function(req, res) {
   res.render('pages/canvas');
 });
 
-// pulled from server.js
-// middleware to use for all requests
-router.use(function(req, res, next) {
-	// do logging
-	console.log('Something is happening.');
-	next(); // make sure we go to the next routes and don't stop here
-});
-
 
 router.post('/quiz', function(req, res) {
-    console.log(req.body)
     res.send("Visit the Quiz Page")
 });
 
 router.post('/canvas', function(req, res) {
-  console.log(req.body)
   res.send("Visited the Canvas Page")
 });
 
 
-// // route for our canvas page
-// router.get('/canvas', function(req, res) {
-//   var shapes = [
-//     { shape = String }
-//   ];
-
-//   res.render('pages/about', { shapes: shapes });
-// });
-
-
 router.get('/draw', function(req, res) {
-    console.log('Get Request for all shapes');
     Shape.find(function(err, shapes){
-        console.log(shapes)
         if(err){
-            console.log('Error retrieving shapes');
+            console.error('Error retrieving shapes');
         }else {
             res.json(shapes);
         }
@@ -83,10 +62,7 @@ router.get('/draw', function(req, res) {
 });
 
 
-
 router.post("/models/shapes", function (req, res) {
-    console.log(req.body);
-
     var newShape = new Shape(req.body)
 
     newShape.save(function(err) {
@@ -96,23 +72,7 @@ router.post("/models/shapes", function (req, res) {
       }
       res.send((200).toString())
     })
-
-    // Shape.(req.body, function(err, shapes){
-    //     res.json(shapes);
-    // });
 });
-
-// router.post("./models/shapes", function (req, res) {
-//     var myData = new shapes(req.body);
-//     myData.save()
-//         .then(item => {
-//         res.send("item saved to database");
-//     })
-//         .catch(err => {
-//         res.status(400).send("unable to save to database");
-//     });
-// });
 
 // export our router
 module.exports = router;
-
