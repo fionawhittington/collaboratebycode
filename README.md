@@ -1,9 +1,8 @@
-.# Build a Website with Node.js
+# Collaborate By Code
 
-Full project for the Build a Website with Node course. 
 
 ## Instructions
 
 1. Clone the repo: `https://github.com/fionawhittington/collaboratebycode.git`
-2. Laumch App" `nodemon`
-2. Laumch Database" `mongodb`
+2. Create a mongo database called `collaboratebycode`
+3. Launch App: `node server.js`
