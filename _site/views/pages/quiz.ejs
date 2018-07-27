@@ -1,76 +1,119 @@
 
-<div class ="container">
+<div class ="container-fluid purpleGradient">
+
     <div class ="row">
 
-        <div class ="col-md-8 col-md-offset-2">
+        <div class ="col-md-8">
 
-            <form id = "quiz" name = "quiz" onchange = "myFunction(); check();">
+            <form id = "quiz" name = "quiz">
+
+                <div style="padding-bottom:100px" id="current">
+                
+                    <p class = "questions">What type of environment do you live in?</p>
+
+                    <div class ="options">
+
+                        <input class ="radio-inline option" type = "radio" id = "mc11" name = "question1" value = "Urban"> 
+
+                        <label for="ossm">Urban</label> <br>
+
+                        <input class ="radio-inline option" type = "radio" id = "mc11" name = "question1" value = "Rural"> 
+
+                        <label for="ossm">Rural</label> <br>
+
+                        <input class ="radio-inline option" type = "radio" id = "mc11" name = "question1" value = "Suburban"> 
+                        <!-- Urban <span class="code">quad(x1, y1, x2, y2, x3, y3, x4, y4)</span><br> -->
+                        <label for="ossm">Suburban</label> <br>
+
+                    </div>
+
+                    <input type = "button" value = "Next" onclick="check(); updateStep();"> 
+
+                </div>
+
+                <div style="padding-bottom:100px" id="current">
+                
+
+                    <p class = "questions"> What is your affiliation to Red Hat? </p>
+
+                    <div class ="options">
+
+                        <input class ="radio-inline option" type = "radio" id = "mc11" name = "question2" value = "Employee"> 
+                        <!-- Urban <span class="code">quad(x1, y1, x2, y2, x3, y3, x4, y4)</span><br> -->
+                        <label for="ossm">Employee</label> <br>
 
 
-            <p class = "questions">What type of environment do you live in?</p>
+                        <input class ="radio-inline option" type = "radio" id = "mc11" name = "question2" value = "Customer"> 
+                        <!-- Urban <span class="code">quad(x1, y1, x2, y2, x3, y3, x4, y4)</span><br> -->
+                        <label for="ossm">Customer</label> <br>
 
-            <div class ="options">
-                <input class ="radio-inline" type = "radio" id = "mc11" name = "question1" value = "Urban"> Urban <br>
-                <input class ="radio-inline" type = "radio" id = "mc12" name = "question1" value = "Rural"> Rural <br>
-                <input class ="radio-inline" type = "radio" id = "mc13" name = "question1" value = "Suburban"> Suburban <br>
-            </div>
+                        <input class ="radio-inline option" type = "radio" id = "mc11" name = "question2" value = "Other"> 
+                        <!-- Urban <span class="code">quad(x1, y1, x2, y2, x3, y3, x4, y4)</span><br> -->
+                        <label for="ossm">Other</label> <br>
+                    </div>
 
+                    <input type = "button" value = "Next" onclick="check(); updateStep();"> 
 
-            <p class = "questions"> What is your affiliation to Red Hat? </p>
+                </div>
 
-            <div class ="options">
-                <input class ="radio-inline option" type = "radio" id = "mc21" name = "question2" value = "Employee"> Employee <br>
-                <input class ="radio-inline" type = "radio" id = "mc22" name = "question2" value = "Customer"> Customer <br>
-                <input class ="radio-inline" type = "radio" id = "mc23" name = "question2" value = "Other"> Other <br>
-            </div>
+                <div style="padding-bottom:100px">
+                
+                    <p class = "questions">Which continent are you from?</p>
 
+                    <div class ="options">
 
-            <p class = "questions">Which continent are you from?</p>
+                        <input class ="radio-inline option" type = "radio" id = "mc11" name = "question3" value = "Other"> 
+                        <!-- Urban <span class="code">quad(x1, y1, x2, y2, x3, y3, x4, y4)</span><br> -->
+                        <label for="ossm">Asia</label> <br>
 
-            <div class ="options">
-                <input class ="radio-inline" type = "radio" id = "mc31" name = "question3" value = "Asia"> Asia<br>
-                <input class ="radio-inline" type = "radio" id = "mc32" name = "question3" value = "Australia"> Australia<br>
-                <input class ="radio-inline" type = "radio" id = "mc33" name = "question3" value = "Antartica"> Antartica<br>
-                <input class ="radio-inline" type = "radio" id = "mc34" name = "question3" value = "Europe"> Europe<br>
-                <input class ="radio-inline" type = "radio" id = "mc35" name = "question3" value = "Asia"> Asia<br>
-                <input class ="radio-inline" type = "radio" id = "mc36" name = "question3" value = "North America"> North America<br>
-                <input class ="radio-inline" type = "radio" id = "mc37" name = "question3" value = "South America"> South America<br>
-            </div>
+                         <input class ="radio-inline option" type = "radio" id = "mc11" name = "question3" value = "Australia"> 
+                        <!-- Urban <span class="code">quad(x1, y1, x2, y2, x3, y3, x4, y4)</span><br> -->
+                        <label for="ossm">Australia</label> <br>
 
+                        <input class ="radio-inline option" type = "radio" id = "mc11" name = "question3" value = "Antarctica"> 
+                        <!-- Urban <span class="code">quad(x1, y1, x2, y2, x3, y3, x4, y4)</span><br> -->
+                        <label for="ossm">Antarctica</label> <br>
 
+                        <input class ="radio-inline option" type = "radio" id = "mc11" name = "question3" value = "Europe"> 
+                        <!-- Urban <span class="code">quad(x1, y1, x2, y2, x3, y3, x4, y4)</span><br> -->
+                        <label for="ossm">Europe</label> <br>
 
-            <input id = "tweet-this-post button" class ="tweet-post-class" type = "button" value = "I'm finished!" onclick = "check();"> 
+                        <input class ="radio-inline option" type = "radio" id = "mc11" name = "question3" value = "North America"> 
+                        <!-- Urban <span class="code">quad(x1, y1, x2, y2, x3, y3, x4, y4)</span><br> -->
+                        <label for="ossm">North America</label> <br>
 
-            <!--<a class="twitter-share-button"
-                via="@redhat"
-                href="https://twitter.com/share"
-                data-size="large"
-                data-text="custom share text"
-                data-url="https://dev.twitter.com/web/tweet-button"
-                data-hashtags="example,demo"
-                data-via="twitterdev"
-                data-related="twitterapi,twitter">
-            Tweet
-            </a>-->
-            <!-- <div id ="container"> -->
-                <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-via="collaboratebycode" data-hashtags="collaboratebycode" data-text="shit" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-            <!-- </div> -->
+                        <input class ="radio-inline option" type = "radio" id = "mc11" name = "question3" value = "Asia"> 
+                        <!-- Urban <span class="code">quad(x1, y1, x2, y2, x3, y3, x4, y4)</span><br> -->
+                        <label for="ossm">Asia</label> <br>
 
-<!--         <div class="row">
-            <div id="tweet-container" class="text-center"></div>
-        </div> -->
+                        <input class ="radio-inline option" type = "radio" id = "mc11" name = "question3" value = "South America"> 
+                        <!-- Urban <span class="code">quad(x1, y1, x2, y2, x3, y3, x4, y4)</span><br> -->
+                        <label for="ossm">South America</label> <br>
+
+                    </div>
+
+                    <input type = "button" value = "Next" onclick="check();"> 
+
+                </div>
 
             </form>
+
+        </div>
+
+        <div class ="col-md-2">
+
+            <div class="shape-scroll">
+
+                <div id="draw-shapes"></div>
+
+            </div>
+
         </div>
 
     </div>
+
 </div>
 
 <!-- Quiz Styling -->
 <link rel="stylesheet" href="/css/quiz.css">
-
-<script language="javascript" type="text/javascript" src="quiztoshape.js"></script>
-<script src="/quiz/index.js"></script>
-<script src="/quiz/p5.min.js"></script>
-<script language="javascript" type="text/javascript" src="quiz/p5.dom.js"></script>
-
+<script type="text/javascript" src="/quiz/scrap2.js"></script>

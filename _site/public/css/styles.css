@@ -13,9 +13,30 @@ body {
   line-height: 1.5;
 }
 
+/*
+Styling the Navigation*/
+
 header .navbar {
   border-radius: 0;
-  margin: 0;}
+  margin: 0px 0px 30px 0px;
+  width: 100%;
+  padding-top: 30px;
+  font-size:16px;
+  padding-left:20px;
+}
+
+.navbar-inverse .navbar-brand {
+  font-weight: bolder;
+}
+
+.navbar-inverse .navbar-nav>li>a:focus, .navbar-inverse .navbar-nav>li>a:hover {
+  background-color: #FBF7FF;
+  color: black;
+}
+
+.navbar-inverse .navbar-brand:hover {
+  color:#9d9d9d;
+}
 
 .hero {
   background-color:white;
@@ -31,14 +52,23 @@ header .navbar {
   top: 50%;
   text-align: left;
   width: 100%;
+  background-color:#CDC0DF;
+}
+/*Styling Headers and Paragraphs on Home Page*/
+h2 {
+  color: black;
+  font-size: 72px;
+  font-weight: lighter;
 }
 
-.hero-content h2 {
-  color: black;
-  font-size: 80px;
-  font-weight:900;
-  font-family: 'Overpass', sans-serif;
+.body_title {
+  font-size:30px;
+  color: #7551A6;
+}
 
+.body_content {
+  font-size:20px;
+  width:100%;
 }
 
 .hero-content p {
@@ -49,15 +79,48 @@ header .navbar {
   text-align: left;
 }
 
+/*
+Background Styles*/
+.purpleBackground {
+  background-color:#CDC0DF;
+}
+
+.canvasLeftStyle{
+  padding-top:100px;
+}
+
+.purpleGradient {
+  background: linear-gradient(
+    to right, 
+    #E2DAEC 0%, 
+    #E2DAEC 50%, 
+    #7551A6 50%, 
+    #7551A6 100%
+  );
+}
+/*Style the header background*/
+
+.jumbotron {
+  background-color:#CDC0DF;
+  background-image: url("/css/shapes.svg");
+  background-size: cover;
+}
+
 /*Styling the main homepage CTA button*/
-.hero-content .btn {
+a.btn.btn-secondary {
   padding: 15px 30px;
   background-color: purple;
   border-radius: 60px;
   font-family: 'Overpass', sans-serif;
-  border: #CC0000;
-
+  background-color: #7551A6;
+  color: white;
+  font-size: 20px;
+  margin-top:20px;
 }  
+
+.btn:hover {
+  background-color: #5C3E84;
+}
 
 main {
   min-height: 500px;
@@ -71,15 +134,16 @@ main {
   background-color: white;
   background-image: none;
   border: none;
-  float: right;
+  float: left;
 }
 
 /*Header Styling*/
 /*///////////////*/
 
 #preTitle {
-  color: white;
-  font-size: 10px;
+  color: #7551A6;
+  font-size: 13px;
+  font-weight: bold;
 }
 /*Footer Styling*/
 /*///////////////*/
@@ -87,14 +151,18 @@ main {
 footer {
   padding: 30px 0;
   font-size: 12px;
-  color: #BBB;
-  background: #b19cd9;
-  white-space: nowrap;
+  color: #464646;
+  background: #CDC0DF;
 }
 
 .footerList {
   list-style: none;
   text-align: left;
+}
+
+ul {
+  padding:0px 0px 10px 0px;
+  margin:0px;
 }
 
 /*Styling "Connect With Us" */

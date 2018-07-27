@@ -1,31 +1,72 @@
+input[type=radio] + label {
+  color: black;
+  background-color: white;
+  padding-left:5px;
+  font-weight:lighter;
+} 
+input[type=radio]:checked + label {
+  background-color: orange;
+  font-style: italic;
+  width: 100%;
+  color: white;
+  padding-left:5px;
+  font-weight:lighter;
+} 
+
+input[type="button"] {
+  margin-bottom:50px;
+}
 
 body {
   font-family: 'Lato', sans-serif;
 }
 
 main {
-  background-color:white;
+  background-color: #E2DAEC;
 }
 
 #quiz {
   margin-left: 10px;
-  background: white;
   padding: 10px 20px 10px 20px;
-  width: 100%;
+  width: 70%;
   border-radius: 20px;
   float: left;
-
+  font-size: 36px
 }
 
+/*Styling the Quiz Options*/
+
 .options {
+  color: #7551A6;
+  font-size:28px;
+  font-weight:300;
+  margin-bottom:20px;
+  margin-top:30px;
+  background-color:white;
+  padding:20px;
+  border-radius:20px;
+}
+
+span.code {
   font-size:20px;
+  color: black;
+  padding-left:20px;
 }
 
 
 input {
-  margin-bottom: 20px;
+  margin: 20px 0px 20px 0px;
   display: block;
+  background-color: #7551A6;
+  font-size: 26px;
+  padding: 20px;
+  color: white;
+  float: right;
+  border-radius:20px;
+  font-weight:lighter;
+
 }
+
 
 #textbox {
   height: 25px;
@@ -35,25 +76,12 @@ input {
   padding-left: 5px;
 }
 
-
-#button {
-  background: green;
-  border: none;
-  border-radius: 5px;
-  padding: 10px;
-  color: white;
-  font-size: 16px;
-  transition-duration: .5s;
-  margin-top: 15px;
-}
-
 p.questions {
-  color: #CC0000;
+  color: #7551A6;
   font-size:28px;
-  font-family:Overpass;
-  font-weight:900;
+  font-weight:300;
   margin-bottom:20px;
-  margin-top:20px;
+  margin-top:36px;
 }
 
 
@@ -64,6 +92,7 @@ p.questions {
   cursor: pointer;
 
 }
+
 
 #after_submit {
   visibility: hidden;
