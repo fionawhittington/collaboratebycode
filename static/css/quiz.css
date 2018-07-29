@@ -28,10 +28,13 @@ main {
 #quiz {
   margin-left: 10px;
   padding: 10px 20px 10px 20px;
-  width: 70%;
   border-radius: 20px;
   float: left;
   font-size: 36px
+}
+
+#draw-shapes > svg {
+  width: 100%;
 }
 
 /*Styling the Quiz Options*/
@@ -42,9 +45,26 @@ main {
   font-weight:300;
   margin-bottom:20px;
   margin-top:30px;
-  background-color:white;
-  padding:20px;
-  border-radius:20px;
+}
+
+.options .answer {
+  padding: 10px;
+  background-color: #fff;
+  cursor: pointer;
+}
+.options .answer.selected {
+  background-color: orange;
+  color: #fff;
+}
+.options .answer:first-child {
+  border-radius: 10px 10px 0 0;
+}
+.options .answer:last-child {
+  border-radius: 0 0 10px 10px;
+}
+.options .answer:hover {
+  background-color: orange;
+  color: #fff;
 }
 
 span.code {
