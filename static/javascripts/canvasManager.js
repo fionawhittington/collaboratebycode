@@ -31,7 +31,6 @@ CanvasManager.prototype.draw = function(shape, attrs) {
     };
 
     var shape = new shapes[shape](...attrs);
-    console.log(shape);
     this.canvas.add(shape);
 
     return shape;
