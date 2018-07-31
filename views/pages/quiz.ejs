@@ -1,6 +1,14 @@
 <div class ="container-fluid purpleGradient">
     <div class ="row">
         <div class ="col-md-6">
+
+           <!--  Update Progress Bar -->
+           <p>Question <span id ="currentQuestion">1</span>/3</p>
+            <div id="myProgress">
+                <div id="myBar"></div>
+            </div>
+
+           <!--  Change Object Based off Answers to Quiz Question -->
             <form id="quiz" name="quiz">
                 <div style="padding-bottom:100px" id="current">
                     <p class = "questions">What type of environment do you live in?</p>
@@ -32,17 +40,19 @@
                     </div>
 
                     <input type = "button" value = "Previous" onclick="console.error('Readd this logic!');"> 
-                    <input type = "button" value = "Next" onclick="console.error('Readd this logic!');"> 
+                    <input type = "button" value = "Next" onclick="console.error('Readd this logic!'); move()"> 
                     <input type = "button" value = "Submit" onclick="console.error('Readd this logic!');"> 
                 </div>
             </form>
         </div>
 
+        <!-- Create a Canvas -->
         <div class ="col-md-6">
             <div class="shape-scroll">
                 <div id="draw-shapes"></div>
             </div>
         </div>
+
     </div>
 </div>
 

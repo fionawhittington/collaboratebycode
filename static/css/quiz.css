@@ -25,6 +25,19 @@ main {
   background-color: #E2DAEC;
 }
 
+/*Progress Bar Style*/
+
+#myProgress {
+    width: 100%;
+    background-color: grey;
+    border-radius: 20px;
+}
+#myBar {
+    width: 1%;
+    height: 10px;
+    background-color: green;
+}
+
 #quiz {
   margin-left: 10px;
   padding: 10px 20px 10px 20px;
