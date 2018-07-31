@@ -1,122 +1,51 @@
-
 <div class ="container-fluid purpleGradient">
-
     <div class ="row">
-
-        <div class ="col-md-8">
-
-            <form id = "quiz" name = "quiz">
-
+        <div class ="col-md-6">
+            <form id="quiz" name="quiz">
                 <div style="padding-bottom:100px" id="current">
-                
                     <p class = "questions">What type of environment do you live in?</p>
-
-                    <div class ="options">
-
-                        <input class ="radio-inline option" type = "radio" id = "mc11" name = "question1" value = "Urban"> 
-
-                        <label for="ossm">Urban</label> <br>
-
-                        <input class ="radio-inline option" type = "radio" id = "mc11" name = "question1" value = "Rural"> 
-
-                        <label for="ossm">Rural</label> <br>
-
-                        <input class ="radio-inline option" type = "radio" id = "mc11" name = "question1" value = "Suburban"> 
-                        <!-- Urban <span class="code">quad(x1, y1, x2, y2, x3, y3, x4, y4)</span><br> -->
-                        <label for="ossm">Suburban</label> <br>
-
+                    <div class ="options" id="environment">
+                        <div class="answer" id="environment-urban" onclick="updateShapeAttr('environment', 'urban')">Urban</div>
+                        <div class="answer" id="environment-rural" onclick="updateShapeAttr('environment', 'rural')">Rural</div>
+                        <div class="answer" id="environment-suburban" onclick="updateShapeAttr('environment', 'suburban')">Suburban</div>
                     </div>
-
                     <input type = "button" value = "Next" onclick="console.error('Readd this logic!')"> 
-
                 </div>
 
                 <div style="padding-bottom:100px" id="current">
-                
-
                     <p class = "questions"> What is your affiliation to Red Hat? </p>
-
-                    <div class ="options">
-
-                        <input class ="radio-inline option" type = "radio" id = "mc11" name = "question2" value = "Employee"> 
-                        <!-- Urban <span class="code">quad(x1, y1, x2, y2, x3, y3, x4, y4)</span><br> -->
-                        <label for="ossm">Employee</label> <br>
-
-
-                        <input class ="radio-inline option" type = "radio" id = "mc11" name = "question2" value = "Customer"> 
-                        <!-- Urban <span class="code">quad(x1, y1, x2, y2, x3, y3, x4, y4)</span><br> -->
-                        <label for="ossm">Customer</label> <br>
-
-                        <input class ="radio-inline option" type = "radio" id = "mc11" name = "question2" value = "Other"> 
-                        <!-- Urban <span class="code">quad(x1, y1, x2, y2, x3, y3, x4, y4)</span><br> -->
-                        <label for="ossm">Other</label> <br>
+                    <div class ="options" id="affiliation">
+                        <div class="answer" id="affiliation-employee" onclick="updateShapeAttr('affiliation', 'employee')">Employee</div>
+                        <div class="answer" id="affiliation-customer" onclick="updateShapeAttr('affiliation', 'customer')">Customer</div>
+                        <div class="answer" id="affiliation-other" onclick="updateShapeAttr('affiliation', 'other')">Other</div>
                     </div>
-
                     <input type = "button" value = "Next" onclick="console.error('Readd this logic!');"> 
-
                 </div>
 
                 <div style="padding-bottom:100px">
-                
                     <p class = "questions">Which continent are you from?</p>
-
-                    <div class ="options">
-
-                        <input class ="radio-inline option" type = "radio" id = "mc11" name = "question3" value = "Other"> 
-                        <!-- Urban <span class="code">quad(x1, y1, x2, y2, x3, y3, x4, y4)</span><br> -->
-                        <label for="ossm">Asia</label> <br>
-
-                         <input class ="radio-inline option" type = "radio" id = "mc11" name = "question3" value = "Australia"> 
-                        <!-- Urban <span class="code">quad(x1, y1, x2, y2, x3, y3, x4, y4)</span><br> -->
-                        <label for="ossm">Australia</label> <br>
-
-                        <input class ="radio-inline option" type = "radio" id = "mc11" name = "question3" value = "Antarctica"> 
-                        <!-- Urban <span class="code">quad(x1, y1, x2, y2, x3, y3, x4, y4)</span><br> -->
-                        <label for="ossm">Antarctica</label> <br>
-
-                        <input class ="radio-inline option" type = "radio" id = "mc11" name = "question3" value = "Europe"> 
-                        <!-- Urban <span class="code">quad(x1, y1, x2, y2, x3, y3, x4, y4)</span><br> -->
-                        <label for="ossm">Europe</label> <br>
-
-                        <input class ="radio-inline option" type = "radio" id = "mc11" name = "question3" value = "North America"> 
-                        <!-- Urban <span class="code">quad(x1, y1, x2, y2, x3, y3, x4, y4)</span><br> -->
-                        <label for="ossm">North America</label> <br>
-
-                        <input class ="radio-inline option" type = "radio" id = "mc11" name = "question3" value = "Asia"> 
-                        <!-- Urban <span class="code">quad(x1, y1, x2, y2, x3, y3, x4, y4)</span><br> -->
-                        <label for="ossm">Asia</label> <br>
-
-                        <input class ="radio-inline option" type = "radio" id = "mc11" name = "question3" value = "South America"> 
-                        <!-- Urban <span class="code">quad(x1, y1, x2, y2, x3, y3, x4, y4)</span><br> -->
-                        <label for="ossm">South America</label> <br>
-
+                    <div class ="options" id="continent">
+                        <div class="answer" id="continent-africa" onclick="updateShapeAttr('continent', 'africa')">Africa</div>
+                        <div class="answer" id="continent-europe" onclick="updateShapeAttr('continent', 'europe')">Europe</div>
+                        <div class="answer" id="continent-asia" onclick="updateShapeAttr('continent', 'asia')">Asia</div>
+                        <div class="answer" id="continent-southamerica" onclick="updateShapeAttr('continent', 'southamerica')">South America</div>
+                        <div class="answer" id="continent-northamerica" onclick="updateShapeAttr('continent', 'northamerica')">North America</div>
+                        <div class="answer" id="continent-australia" onclick="updateShapeAttr('continent', 'australia')">Australia</div>
                     </div>
 
                     <input type = "button" value = "Next" onclick="console.error('Readd this logic!');"> 
-
                 </div>
-
             </form>
-
         </div>
 
-        <div class ="col-md-2">
-
+        <div class ="col-md-6">
             <div class="shape-scroll">
-
                 <div id="draw-shapes"></div>
-
             </div>
-
         </div>
-
     </div>
-
 </div>
 
 <!-- Quiz Styling -->
 <link rel="stylesheet" href="/css/quiz.css">
-<<<<<<< HEAD
-=======
-<script type="text/javascript" src="/quiz/quiz.js"></script>
->>>>>>> master
+<script src="/javascripts/quizPage.js" rel="text/javascript"></script>
