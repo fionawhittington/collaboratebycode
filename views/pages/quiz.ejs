@@ -9,26 +9,36 @@
             </div>
 
            <!--  Change Object Based off Answers to Quiz Question -->
-            <form id="quiz" name="quiz">
-                <div style="padding-bottom:100px" id="current">
+            <form id="quiz" name="quiz" class = "slideshow-container">
+
+                <div style="padding-bottom:100px" class = "mySlides">
                     <p class = "questions">What type of environment do you live in?</p>
                     <div class ="options" id="environment">
                         <div class="answer" id="environment-urban" onclick="updateShapeAttr('environment', 'urban')">Urban</div>
                         <div class="answer" id="environment-rural" onclick="updateShapeAttr('environment', 'rural')">Rural</div>
                         <div class="answer" id="environment-suburban" onclick="updateShapeAttr('environment', 'suburban')">Suburban</div>
                     </div>
+
+                    <input type = "button" value = "Previous" onclick="console.error('Readd this logic!');"> 
+                    <!-- Replace with Next Question -->
+                    <input type = "button" value = "Next" class ="next"  onclick="console.error('Readd this logic!'); move(); showSlides()"> 
+
                 </div>
 
-                <div style="padding-bottom:100px" id="current">
+                <div style="padding-bottom:100px" class = "mySlides">
                     <p class = "questions"> What is your affiliation to Red Hat? </p>
                     <div class ="options" id="affiliation">
                         <div class="answer" id="affiliation-employee" onclick="updateShapeAttr('affiliation', 'employee')">Employee</div>
                         <div class="answer" id="affiliation-customer" onclick="updateShapeAttr('affiliation', 'customer')">Customer</div>
                         <div class="answer" id="affiliation-other" onclick="updateShapeAttr('affiliation', 'other')">Other</div>
                     </div>
+
+                    <input type = "button" value = "Previous" onclick="console.error('Readd this logic!');"> 
+                    <input type = "button" class ="next" value = "Next" onclick="console.error('Readd this logic!'); move(); showSlides()"> 
+
                 </div>
 
-                <div style="padding-bottom:100px">
+                <div style="padding-bottom:100px" class = "mySlides">
                     <p class = "questions">Which continent are you from?</p>
                     <div class ="options" id="continent">
                         <div class="answer" id="continent-africa" onclick="updateShapeAttr('continent', 'africa')">Africa</div>
@@ -41,8 +51,9 @@
 
                     <input type = "button" value = "Previous" onclick="console.error('Readd this logic!');"> 
                     <input type = "button" value = "Next" onclick="console.error('Readd this logic!'); move()"> 
-                    <input type = "button" value = "Submit" onclick="console.error('Readd this logic!');"> 
+                    <input type = "button" value = "Submit" onclick="console.error('Readd this logic!'); showSlides()"> 
                 </div>
+
             </form>
         </div>
 

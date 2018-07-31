@@ -93,3 +93,25 @@ function move() {
     document.getElementById("currentQuestion").innerHTML = x;
     return false;
 }
+
+//SlideShow for Questions
+
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var next = document.getElementsByClassName("next");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    for (i = 0; i < next.length; i++) {
+        next[i].className = next[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    next[slideIndex-1].className += " active";
+    // setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
