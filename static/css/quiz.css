@@ -38,6 +38,36 @@ main {
     background-color: green;
 }
 
+/*Style "Preview" Text */
+
+#preview {
+  color: white;
+  text-align: center;
+}
+
+/*Style Submission Page Text*/
+p#quizSubtitle {
+  font-size: 20px;
+}
+
+p#codeDisplayTitle {
+  font-size: 21px;
+  text-transform: uppercase;
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
+
+p#codeDisplayNumber {
+  font-size: 12px;
+  color: lightgrey;
+  padding: 10px;
+}
+
+h1#quizSubmissionTitle{
+  font-size:34px;
+}
+
+
 #quiz {
   margin-left: 10px;
   padding: 10px 20px 10px 20px;

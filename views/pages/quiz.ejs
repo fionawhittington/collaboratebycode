@@ -50,8 +50,21 @@
                     </div>
 
                     <input type = "button" value = "Previous" onclick="console.error('Readd this logic!');"> 
-                    <input type = "button" value = "Next" onclick="console.error('Readd this logic!'); move()"> 
-                    <input type = "button" value = "Submit" onclick="console.error('Readd this logic!'); showSlides()"> 
+                    <input type = "button" value = "Next" onclick="console.error('Readd this logic!'); move(); showSlides()"> 
+                </div>
+
+                <div style="padding-bottom:100px" class = "mySlides">
+                    <h1 id ="quizSubmissionTitle">Congratulations You're Finished!</h1>
+                    <p id ="quizSubtitle">Click collaborate to add your object to our canvas.</p>
+                    <p id ="codeDisplayTitle">Your Code</p>
+
+                    <div class ="finalCode" style="background-color: grey">
+                        <p id ="codeDisplayNumber" >1</p>
+                        <p id ="codeDisplayNumber" >2</p>
+                        <p id ="codeDisplayNumber" >3</p>
+                    </div>
+
+                    <input type = "button" value = "Collaborate" onclick="console.error('Readd this logic!');"> 
                 </div>
 
             </form>
@@ -60,6 +73,7 @@
         <!-- Create a Canvas -->
         <div class ="col-md-6">
             <div class="shape-scroll">
+                <h3 id ="preview">Preview<h3>
                 <div id="draw-shapes"></div>
             </div>
         </div>
