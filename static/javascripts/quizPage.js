@@ -94,6 +94,13 @@ function move() {
     return false;
 }
 
+//Show the Code 
+showFinalCode();
+function showFinalCode() {
+    // document.getElementsByClassName("answer");
+}
+
+
 //SlideShow for Questions
 
 var slideIndex = 0;

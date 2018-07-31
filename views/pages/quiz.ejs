@@ -12,6 +12,16 @@
             <form id="quiz" name="quiz" class = "slideshow-container">
 
                 <div style="padding-bottom:100px" class = "mySlides">
+
+                    <p class = "questions">Before Getting Started: <br> Upload an Image of Yourself</p>
+
+                    <!-- Begin Quiz and Go to First Question -->
+                    <input type = "button" value = "Start Quiz" class ="next"  onclick="console.error('Readd this logic!'); move(); showSlides()"> 
+
+                </div>
+
+
+                <div style="padding-bottom:100px" class = "mySlides">
                     <p class = "questions">What type of environment do you live in?</p>
                     <div class ="options" id="environment">
                         <div class="answer" id="environment-urban" onclick="updateShapeAttr('environment', 'urban')">Urban</div>
@@ -58,8 +68,9 @@
                     <p id ="quizSubtitle">Click collaborate to add your object to our canvas.</p>
                     <p id ="codeDisplayTitle">Your Code</p>
 
-                    <div class ="finalCode" style="background-color: grey">
-                        <p id ="codeDisplayNumber" >1</p>
+                    <div class ="finalCode"">
+                        <p id ="codeDisplayCodeType" >two.js</p>
+                        <p id ="codeDisplayNumber" >1 <span class ="answer"></span></p>
                         <p id ="codeDisplayNumber" >2</p>
                         <p id ="codeDisplayNumber" >3</p>
                     </div>
