@@ -135,6 +135,19 @@ span#quizCode {
   border-width: 12px;
 }
 
+/*Style the Photo Submit Button */
+
+input#submitPicture {
+  padding: 10px;
+  font-size:14px;
+  background-color: purple;
+  color: white;
+}
+/*Style the Choose File Button*/
+input#pic {
+  background-color: #E2DAEC;
+  font-size: 14px;
+}
 .options .answer.selected:hover {
   background-color: orange;
   color: #fff;
@@ -171,7 +184,7 @@ span.code {
 }
 
 
-input {
+input.next, .previous {
   margin: 20px 0px 20px 0px;
   display: block;
   background-color: #7551A6;

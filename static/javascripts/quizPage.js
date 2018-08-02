@@ -1,3 +1,6 @@
+// var img = document.createElement('img');
+
+
 var userAnswers = {
     // Set some default values
     'environment': 'urban',
@@ -27,9 +30,12 @@ function setQuestionAnswer(category, selectedAnswer) {
 function renderShapeToCanvas() {
     canvas.clear();
     var shapeAttrs = answersToAttributes();
+    
+    var texture = new Two.Texture('https://raw.githubusercontent.com/fionawhittington/collaboratebycode/master/static/img/grace.jpg');
 
     var shape = canvas.draw(shapeAttrs.shape, shapeAttrs.sizeArgs);
-    shape.fill = shapeAttrs.fill;
+    shape.fill = texture;
+    // texture.scale = 0.8;
     shape.linewidth = shapeAttrs.linewidth;
     shape.stroke = 'red'; // This is just a default, and we can change it whenever
     canvas.update();
@@ -48,7 +54,8 @@ function answersToAttributes(attr, value) {
     //object.fill = texture. 
     //texture.scale = 0.125
 
-    var texture = new Two.Texture('user.png')
+    // var texture = new Two.Texture('user.png')
+
 
 
     var sizeArgs = {
@@ -65,7 +72,7 @@ function answersToAttributes(attr, value) {
     }[userAnswers.affiliation];
 
     var fill = {
-        'africa': texture,
+        'africa': 'yellow',
         'asia': 'red',
         'northamerica': 'green',
         'southamerica': 'yellow',

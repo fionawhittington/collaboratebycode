@@ -14,9 +14,15 @@
                 <div style="padding-bottom:100px" class = "mySlides">
 
                     <p class = "questions">Before Getting Started: <br> Upload an Image of Yourself</p>
+                    
+                    <form action="/action_page.php" accept="image/gif, image/jpeg">
+                     Choose File <input type="file" name="pic" id="pic"><br>
+                      <input id = "submitPicture" type="submit" value="Submit">
+                    </form>
+
 
                     <!-- Begin Quiz and Go to First Question -->
-                    <input type = "button" value = "Start Quiz" class ="next"  onclick="console.error('Readd this logic!'); moveForward(); showSlides()"> 
+                    <input type = "button" value = "Start Quiz" class ="next"  onclick="console.error('Readd this logic!'); moveForward(); showSlides()">
 
                 </div>
 
