@@ -75,6 +75,15 @@ h1#quizSubmissionTitle{
   font-size:34px;
 }
 
+/*Style the Code Next to the Quiz Choice */
+span#quizCode {
+  font-size:13px;
+  color: black;
+  font-family: monospace;
+  padding-left: 30px;
+
+}
+
 /*Style the background of the code on the submissions page*/
 .finalCode {
   background-color: lightgrey;
@@ -96,7 +105,7 @@ h1#quizSubmissionTitle{
 /*Styling the Quiz Options*/
 
 .options {
-  color: #7551A6;
+  color: #E2DAEC ;
   font-size:28px;
   font-weight:300;
   margin-bottom:20px;
@@ -107,20 +116,52 @@ h1#quizSubmissionTitle{
   padding: 10px;
   background-color: #fff;
   cursor: pointer;
+  font-size: 13px;
+  border-left-style:solid;
+  border-width:25px;
+  border-right-style:solid;
+  padding-left:30px;
 }
+
 .options .answer.selected {
   background-color: orange;
   color: #fff;
+  font-weight: 800;
+  padding:10px;
+  font-size:16px;
+  border-style: solid;
+  border-radius: 30px;
+  border-color: orange;
+  border-width: 12px;
 }
-.options .answer:first-child {
-  border-radius: 10px 10px 0 0;
-}
-.options .answer:last-child {
-  border-radius: 0 0 10px 10px;
-}
-.options .answer:hover {
+
+.options .answer.selected:hover {
   background-color: orange;
   color: #fff;
+  font-weight: 800;
+  padding:10px;
+  font-size:16px;
+  border-style: solid;
+  border-radius: 30px;
+  border-color: orange;
+  border-width: 12px;
+}
+.options .answer:first-child {
+/*   border-radius: 10px 10px 0 0; */
+}
+.options .answer:last-child {
+/*  border-radius: 0 0 10px 10px;*/
+}
+.options .answer:hover {
+  background-color: #ffbb6f;
+  color: #fff;
+  border-left-color:#E2DAEC;
+  border-right-color:#E2DAEC;
+  border-right-style:transparent;
+  border-left-style:solid;
+  border-width:25px;
+  border-right-style:solid;
+  padding-left:30px;
 }
 
 span.code {
@@ -155,7 +196,7 @@ input {
 p.questions {
   color: #7551A6;
   font-size:28px;
-  font-weight:300;
+  font-weight:500;
   margin-bottom:20px;
   margin-top:36px;
 }

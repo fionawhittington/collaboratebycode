@@ -42,6 +42,15 @@ function answersToAttributes(attr, value) {
         'suburban': 'ellipse'
     }[userAnswers.environment];
 
+    //User Upload a Picture
+    //Set Image to a Variable
+    //Assign Texture to Variable
+    //object.fill = texture. 
+    //texture.scale = 0.125
+
+    var texture = new Two.Texture('user.png')
+
+
     var sizeArgs = {
         'rectangle': [110, 110, 200, 200],
         'polygon': [110, 110, 50, 5],
@@ -56,7 +65,7 @@ function answersToAttributes(attr, value) {
     }[userAnswers.affiliation];
 
     var fill = {
-        'africa': 'blue',
+        'africa': texture,
         'asia': 'red',
         'northamerica': 'green',
         'southamerica': 'yellow',
@@ -68,15 +77,16 @@ function answersToAttributes(attr, value) {
         shape: shape,
         linewidth: linewidth,
         fill: fill,
-        sizeArgs: sizeArgs
+        sizeArgs: sizeArgs,
     };
+
 }
 
-//Update Progress Bar
+//Move Progress Bar Forward
 
 var x = 0;
 
-function move() {
+function moveForward() {
     var elem = document.getElementById("myBar"); 
     var width = 1;
     var id = setInterval(frame, 10);
@@ -94,11 +104,38 @@ function move() {
     return false;
 }
 
-//Show the Code 
+//Move Progress Bar Backward
+
+function moveBackward() {
+    var elem = document.getElementById("myBar"); 
+    var width = 1;
+    var id = setInterval(frame, 10);
+    function frame() {
+        if (width >= 100) {
+            clearInterval(id);
+        } else {
+            width++; 
+            elem.style.width = width + '%'; 
+        }
+    }
+
+    x--;
+    document.getElementById("currentQuestion").innerHTML = x;
+    return false;
+}
+
+// //Show the Code 
 showFinalCode();
 function showFinalCode() {
-    // document.getElementsByClassName("answer");
+
+     document.getElementById("lineOneQuizCode").innerHTML = userAnswers.environment;
+     // document.getElementById("lineTwoQuizCode").innerHTML = document.getElementsByClassName("selected").innerHTML;
+     // document.getElementById("lineThreeQuizCode").innerHTML = document.getElementsByClassName("selected").innerHTML;
+
 }
+
+// // console.log(shape);
+// console.log(userAnswers.environment);
 
 
 //SlideShow for Questions
@@ -114,6 +151,23 @@ function showSlides() {
        slides[i].style.display = "none";  
     }
     slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    for (i = 0; i < next.length; i++) {
+        next[i].className = next[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    next[slideIndex-1].className += " active";
+    // setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+
+function showPreviousSlide() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var next = document.getElementsByClassName("previous");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    slideIndex--;
     if (slideIndex > slides.length) {slideIndex = 1}    
     for (i = 0; i < next.length; i++) {
         next[i].className = next[i].className.replace(" active", "");
