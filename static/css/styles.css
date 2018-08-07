@@ -18,9 +18,13 @@ main {
   color: white;
 }
 
+.textBlack {
+  color: black;
+}
 /*About Page Styling*/
 p.aboutDescription {
   color: black;
+  padding-bottom: 50px;
 }
 /*
 Styling the Navigation*/
@@ -33,9 +37,13 @@ Styling the Navigation*/
 
 /*Styling Headers and Paragraphs on Home Page*/
 h2 {
-  color: black;
+  color: white;
   font-size: 72px;
   font-weight: lighter;
+}
+
+h2#aboutTitle {
+  color: black;
 }
 
 .body_title {
@@ -80,7 +88,7 @@ Background Styles*/
 /*Style the header background*/
 
 .jumbotron {
-  background-color:#CDC0DF;
+  background-color: #c50001;
   background-image: url("/css/shapes.svg");
   background-size: cover;
 }
@@ -88,10 +96,9 @@ Background Styles*/
 /*Styling the main homepage CTA button*/
 a.btn.btn-secondary {
   padding: 15px 30px;
-  background-color: purple;
   border-radius: 60px;
   font-family: 'Overpass', sans-serif;
-  background-color: #7551A6;
+  background-color: #500000;
   color: white;
   font-size: 20px;
   margin-top:20px;
@@ -102,12 +109,21 @@ a.btn.btn-secondary {
 }
 
 main {
-  min-height: 500px;
-  padding: 50px 0;
+}
+
+/*Preview Title */
+
+h3#preview {
+  margin-top: 0;
+  padding-top: 30px;
 }
 
 /*Navbar Styling*/
 /*///////////////*/
+
+.navbar {
+  margin-bottom: 0;
+}
 
 .navbar-inverse {
   background-color: white;
@@ -120,7 +136,7 @@ main {
 /*///////////////*/
 
 #preTitle {
-  color: #7551A6;
+  color: black;
   font-size: 13px;
   font-weight: bold;
 }

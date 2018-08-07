@@ -2,7 +2,6 @@
 body {
   color: white;
   font-family: 'Overpass', sans-serif;
-
 }
 
 input[type=radio] + label {
@@ -79,8 +78,9 @@ p#codeDisplayCodeType {
   font-size: 14px;
   color: darkgrey;
   font-weight: bolder;
-  padding: 10px 20px 20px 10px;
+  padding: 10px 20px 8px 10px;
 }
+
 
 h1#quizSubmissionTitle{
   font-size: 24px;
@@ -206,8 +206,8 @@ input.next, .previous {
   margin: 10px 10px 10px 0px;
   display: block;
   background-color: #630000;
-  font-size: 23px;
-  padding: 10px;
+  font-size: 16px;
+  padding: 10px 30px 10px 30px;
   color: white;
   float: right;
   border-radius:20px;
@@ -236,6 +236,7 @@ p.questions {
 p#questionCount {
   color: white;
   font-weight: 300;
+  margin-top: 4%;
 }
 
 

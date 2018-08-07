@@ -71,8 +71,6 @@
                     <div class="answer" id="continent-europe" onclick="updateShapeAttr('continent', 'europe')">Europe<span id="quizCode"><span style="color: blue">Two.Ellipse</span><span>(x, y, width, height);</span></div>
                     <div class="answer" id="continent-asia" onclick="updateShapeAttr('continent', 'asia')">Asia<span id="quizCode"><span style="color: blue">Two.Ellipse</span><span>(x, y, width, height);</span></div>
                     <div class="answer" id="continent-southamerica" onclick="updateShapeAttr('continent', 'southamerica')">South America<span id="quizCode"><span style="color: blue">Two.Ellipse</span><span>(x, y, width, height);</span></div>
-                    <div class="answer" id="continent-northamerica" onclick="updateShapeAttr('continent', 'northamerica')">North America<span id="quizCode"><span style="color: blue">Two.Ellipse</span><span>(x, y, width, height);</span></div>
-                    <div class="answer" id="continent-australia" onclick="updateShapeAttr('continent', 'australia')">Australia<span id="quizCode"><span style="color: blue">Two.Ellipse</span><span>(x, y, width, height);</span></div>
                 </div>
 
                <input type = "button" value = "Previous" class ="previous" onclick="console.error('Readd this logic!'); moveBackward(); showPreviousSlide();"> 
@@ -82,8 +80,8 @@
 
             <div style="padding-bottom:100px" class = "mySlides">
                 <h1 id ="quizSubmissionTitle">Congratulations You're Finished!</h1>
-                <p id ="quizSubtitle">Click collaborate to add your object to our canvas.</p>
-                <p id ="codeDisplayTitle">Your Code</p>
+<!--                 <p id ="quizSubtitle">Click collaborate to add your object to our canvas.</p>
+ -->                <p id ="codeDisplayTitle">Your Code</p>
 
                 <div class ="finalCode">
                     <p id ="codeDisplayCodeType" >two.js</p>
@@ -92,7 +90,8 @@
                     <p id ="codeDisplayNumber" >3<span id = "lineThreeQuizCode"></span></p>
                 </div>
 
-                <input type = "button" value = "Collaborate" onclick="console.error('Readd this logic!');"> 
+                <!-- <input type = "button" value = "Collaborate" onclick="console.error('Readd this logic!');">  -->
+                <input type = "button" value = "Collaborate" class ="next"  onclick="console.error('Readd this logic!'); moveForward(); showSlides()"> 
             </div>
 
         </form>

@@ -6,7 +6,7 @@
 function CanvasManager(element, extraParams) {
     var params = {
         width: 600,
-        height: 400
+        height: 600
     };
 
     if (extraParams) params = Object.assign({}, params, extraParams)

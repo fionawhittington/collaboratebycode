@@ -39,8 +39,8 @@ function answerToShape(answer, index) {
     }
 
     var fillColor = {
-        'Employee': 'blue',
-        'Customer': 'orangered',
+        'Employee': 'red',
+        'Customer': 'darkred',
         'Other': 'grey'
     };
 
