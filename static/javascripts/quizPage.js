@@ -89,33 +89,31 @@ function answersToAttributes(attr, value) {
 
 }
 
-//Move Progress Bar Forward
+// <div class="progress">
+//   <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+// </div>
+
+//Move Question Backward Forward
 
 var x = 0;
+var width = 20;
 
 function moveForward() {
-    var elem = document.getElementById("myBar"); 
-    var width = 1;
-    var id = setInterval(frame, 10);
-    function frame() {
-        if (width >= 100) {
-            clearInterval(id);
-        } else {
-            width++; 
-            elem.style.width = width + '%'; 
-        }
+    var elem = document.getElementById("myBar");
+    if (width < 100) {
+      width+=20;
+      elem.style.width = width + '%';
     }
 
     x++;
     document.getElementById("currentQuestion").innerHTML = x;
-    return false;
 }
 
-//Move Progress Bar Backward
+//Move Question Forward Backward
 
 function moveBackward() {
     var elem = document.getElementById("myBar"); 
-    var width = 1;
+    var width = 10;
     var id = setInterval(frame, 10);
     function frame() {
         if (width >= 100) {

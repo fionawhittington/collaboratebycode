@@ -11,49 +11,26 @@
 body {
   font-size: 16px;
   line-height: 1.5;
+  font-family: 'Overpass', sans-serif;
 }
 
-/*
-Styling the Navigation*/
-
-header .navbar {
-  border-radius: 0;
-  margin: 0px 0px 30px 0px;
-  width: 100%;
-  padding-top: 30px;
-  font-size:16px;
-  padding-left:20px;
+main {
+  color: white;
 }
 
-.navbar-inverse .navbar-brand {
-  font-weight: bolder;
-}
-
-.navbar-inverse .navbar-nav>li>a:focus, .navbar-inverse .navbar-nav>li>a:hover {
-  background-color: #FBF7FF;
+/*About Page Styling*/
+p.aboutDescription {
   color: black;
 }
-
-.navbar-inverse .navbar-brand:hover {
-  color:#9d9d9d;
+/*
+Styling the Navigation*/
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover{
+  background-color: lightgrey;
+  border-bottom-color: darkred;
+  border-bottom-style: solid;
+  border-bottom-width: 5px;
 }
 
-.hero {
-  background-color:white;
-  background-repeat: no-repeat;;
-  background-size: cover;
-  background-position: center center;
-  padding: 50px 0;
-  position: relative;
-}
-
-.hero-content {
-  position: absolute;
-  top: 50%;
-  text-align: left;
-  width: 100%;
-  background-color:#CDC0DF;
-}
 /*Styling Headers and Paragraphs on Home Page*/
 h2 {
   color: black;
@@ -62,13 +39,15 @@ h2 {
 }
 
 .body_title {
-  font-size:30px;
-  color: #7551A6;
+  font-size: 40px;
+  font-weight: 400;
 }
 
 .body_content {
-  font-size:20px;
+  font-size:16px;
   width:100%;
+  margin-bottom: 50px;
+  font-weight:300;
 }
 
 .hero-content p {
@@ -81,8 +60,8 @@ h2 {
 
 /*
 Background Styles*/
-.purpleBackground {
-  background-color:#CDC0DF;
+.redBackground {
+  background-color: #c50001;
 }
 
 .canvasLeftStyle{
@@ -151,14 +130,15 @@ main {
 footer {
   padding: 30px 0;
   font-size: 12px;
-  color: #464646;
-  background: #CDC0DF;
+  color: white;
+  background: #3d3d3d;
 }
 
 .footerList {
   list-style: none;
   text-align: left;
 }
+
 
 ul {
   padding:0px 0px 10px 0px;
@@ -168,14 +148,14 @@ ul {
 /*Styling "Connect With Us" */
 #footerCTA {
   font-size: 16px;
-  color: black;
+  color: white;
   font-weight: 500;
 
 }
 
 /*Styling description under "Connect With Us"*/
 #footerCTAdescrip {
-  color: black;
+  color: white;
   padding-top: 6px;
   white-space: normal;
 }

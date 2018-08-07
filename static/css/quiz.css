@@ -1,3 +1,10 @@
+
+body {
+  color: white;
+  font-family: 'Overpass', sans-serif;
+
+}
+
 input[type=radio] + label {
   color: black;
   background-color: white;
@@ -22,7 +29,7 @@ body {
 }
 
 main {
-  background-color: #E2DAEC;
+  background-color: #ff0000;
 }
 
 /*Progress Bar Style*/
@@ -35,19 +42,22 @@ main {
 #myBar {
     width: 1%;
     height: 10px;
-    background-color: green;
+    background-color: #500000;
 }
+
 
 /*Style "Preview" Text */
 
 #preview {
   color: white;
   text-align: center;
+  font-weight: 300;
 }
 
 /*Style Submission Page Text*/
 p#quizSubtitle {
-  font-size: 20px;
+  font-size: 14px;
+  font-weight: 300;
 }
 
 p#codeDisplayTitle {
@@ -55,6 +65,7 @@ p#codeDisplayTitle {
   text-transform: uppercase;
   padding-top: 30px;
   padding-bottom: 10px;
+  color: #500000;
 }
 
 p#codeDisplayNumber {
@@ -72,7 +83,8 @@ p#codeDisplayCodeType {
 }
 
 h1#quizSubmissionTitle{
-  font-size:34px;
+  font-size: 24px;
+  font-weight: 300;
 }
 
 /*Style the Code Next to the Quiz Choice */
@@ -91,11 +103,16 @@ span#quizCode {
 
 
 #quiz {
-  margin-left: 10px;
-  padding: 10px 20px 10px 20px;
+ /* margin-left: 10px;
+  padding: 10px 20px 10px 20px;*/
   border-radius: 20px;
   float: left;
   font-size: 36px
+}
+
+
+#submitImage {
+  float: left;
 }
 
 #draw-shapes > svg {
@@ -105,7 +122,7 @@ span#quizCode {
 /*Styling the Quiz Options*/
 
 .options {
-  color: #E2DAEC ;
+  color: #ff0000;
   font-size:28px;
   font-weight:300;
   margin-bottom:20px;
@@ -117,21 +134,21 @@ span#quizCode {
   background-color: #fff;
   cursor: pointer;
   font-size: 13px;
-  border-left-style:solid;
+  border-left-style: solid;
   border-width:25px;
-  border-right-style:solid;
+  border-right-style: solid;
   padding-left:30px;
 }
 
 .options .answer.selected {
-  background-color: orange;
+  background-color: darkgrey;
   color: #fff;
   font-weight: 800;
   padding:10px;
   font-size:16px;
   border-style: solid;
   border-radius: 30px;
-  border-color: orange;
+  border-color: darkgrey;
   border-width: 12px;
 }
 
@@ -145,18 +162,19 @@ input#submitPicture {
 }
 /*Style the Choose File Button*/
 input#pic {
-  background-color: #E2DAEC;
   font-size: 14px;
+  color: white;
 }
+
 .options .answer.selected:hover {
-  background-color: orange;
+  background-color: darkgrey;
   color: #fff;
   font-weight: 800;
   padding:10px;
   font-size:16px;
   border-style: solid;
   border-radius: 30px;
-  border-color: orange;
+  border-color: darkgrey;
   border-width: 12px;
 }
 .options .answer:first-child {
@@ -166,10 +184,10 @@ input#pic {
 /*  border-radius: 0 0 10px 10px;*/
 }
 .options .answer:hover {
-  background-color: #ffbb6f;
+  background-color: lightgrey;
   color: #fff;
-  border-left-color:#E2DAEC;
-  border-right-color:#E2DAEC;
+  border-left-color: #ff0000;
+  border-right-color: #ff0000;
   border-right-style:transparent;
   border-left-style:solid;
   border-width:25px;
@@ -185,16 +203,16 @@ span.code {
 
 
 input.next, .previous {
-  margin: 20px 0px 20px 0px;
+  margin: 10px 10px 10px 0px;
   display: block;
-  background-color: #7551A6;
-  font-size: 26px;
-  padding: 20px;
+  background-color: #630000;
+  font-size: 23px;
+  padding: 10px;
   color: white;
   float: right;
   border-radius:20px;
   font-weight:lighter;
-
+  border: none;
 }
 
 
@@ -207,11 +225,17 @@ input.next, .previous {
 }
 
 p.questions {
-  color: #7551A6;
+  color: white;
   font-size:28px;
   font-weight:500;
   margin-bottom:20px;
   margin-top:36px;
+}
+
+/*Style The Question Counter Above the Progress Bar*/
+p#questionCount {
+  color: white;
+  font-weight: 300;
 }
 
 

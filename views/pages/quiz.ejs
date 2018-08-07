@@ -1,103 +1,104 @@
-<div class ="container-fluid purpleGradient">
-    <div class ="row">
-        <div class ="col-md-6">
 
-           <!--  Update Progress Bar -->
-           <p>Question <span id ="currentQuestion">1</span>/3</p>
-            <div id="myProgress">
-                <div id="myBar"></div>
-            </div>
+<div class ="row">
 
-           <!--  Change Object Based off Answers to Quiz Question -->
-            <form id="quiz" name="quiz" class = "slideshow-container">
-
-                <div style="padding-bottom:100px" class = "mySlides">
-
-                    <p class = "questions">Before Getting Started: <br> Upload an Image of Yourself</p>
-                    
-                    <form action="/action_page.php" accept="image/gif, image/jpeg">
-                     Choose File <input type="file" name="pic" id="pic"><br>
-                      <input id = "submitPicture" type="submit" value="Submit">
-                    </form>
-
-
-                    <!-- Begin Quiz and Go to First Question -->
-                    <input type = "button" value = "Start Quiz" class ="next"  onclick="console.error('Readd this logic!'); moveForward(); showSlides()">
-
-                </div>
-
-
-                <div style="padding-bottom:100px" class = "mySlides">
-                    <p class = "questions">What type of environment do you live in?</p>
-                    <div class ="options" id="environment">
-                        <div class="answer" id="environment-urban" onclick="updateShapeAttr('environment', 'urban')">Urban<span id="quizCode"><span style="color: blue">Two.Ellipse</span><span>(x, y, width, height);</span></span></div>
-                        <div class="answer" id="environment-rural" onclick="updateShapeAttr('environment', 'rural')">Rural<span id="quizCode"><span style="color: blue">Two.Square</span><span>(x, y, width, height);</span></div>
-                        <div class="answer" id="environment-suburban" onclick="updateShapeAttr('environment', 'suburban')">Suburban<span id="quizCode"><span style="color: blue">Two.Circle</span><span>(x, y, width, height);</span></div>
-                    </div>
-
-                    <input type = "button" value = "Previous" class ="previous" onclick="console.error('Readd this logic!'); moveBackward(); showPreviousSlide();"> 
-                    <!-- Replace with Next Question -->
-                    <input type = "button" value = "Next" class ="next"  onclick="console.error('Readd this logic!'); moveForward(); showSlides()"> 
-
-                </div>
-
-                <div style="padding-bottom:100px" class = "mySlides">
-                    <p class = "questions"> What is your affiliation to Red Hat? </p>
-                    <div class ="options" id="affiliation">
-                        <div class="answer" id="affiliation-employee" onclick="updateShapeAttr('affiliation', 'employee')">Employee<span id="quizCode"><span style="color: blue">Two.1</span><span>(x, y, width, height);</span></div>
-                        <div class="answer" id="affiliation-customer" onclick="updateShapeAttr('affiliation', 'customer')">Customer<span id="quizCode"><span style="color: blue">Two.2</span><span>(x, y, width, height);</span></div>
-                        <div class="answer" id="affiliation-other" onclick="updateShapeAttr('affiliation', 'other')">Other<span id="quizCode"><span style="color: blue">Two.3</span><span>(x, y, width, height);</span></div>
-                    </div>
-
-                   <input type = "button" value = "Previous" class ="previous" onclick="console.error('Readd this logic!'); moveBackward(); showPreviousSlide();"> 
-                    <!-- Replace with Next Question -->
-                    <input type = "button" value = "Next" class ="next"  onclick="console.error('Readd this logic!'); moveForward(); showSlides()"> 
-
-                </div>
-
-                <div style="padding-bottom:100px" class = "mySlides">
-                    <p class = "questions">Which continent are you from?</p>
-                    <div class ="options" id="continent">
-                        <div class="answer" id="continent-africa" onclick="updateShapeAttr('continent', 'africa')">Africa<span id="quizCode"><span style="color: blue">Two.Ellipse</span><span>(x, y, width, height);</span></div>
-                        <div class="answer" id="continent-europe" onclick="updateShapeAttr('continent', 'europe')">Europe<span id="quizCode"><span style="color: blue">Two.Ellipse</span><span>(x, y, width, height);</span></div>
-                        <div class="answer" id="continent-asia" onclick="updateShapeAttr('continent', 'asia')">Asia<span id="quizCode"><span style="color: blue">Two.Ellipse</span><span>(x, y, width, height);</span></div>
-                        <div class="answer" id="continent-southamerica" onclick="updateShapeAttr('continent', 'southamerica')">South America<span id="quizCode"><span style="color: blue">Two.Ellipse</span><span>(x, y, width, height);</span></div>
-                        <div class="answer" id="continent-northamerica" onclick="updateShapeAttr('continent', 'northamerica')">North America<span id="quizCode"><span style="color: blue">Two.Ellipse</span><span>(x, y, width, height);</span></div>
-                        <div class="answer" id="continent-australia" onclick="updateShapeAttr('continent', 'australia')">Australia<span id="quizCode"><span style="color: blue">Two.Ellipse</span><span>(x, y, width, height);</span></div>
-                    </div>
-
-                   <input type = "button" value = "Previous" class ="previous" onclick="console.error('Readd this logic!'); moveBackward(); showPreviousSlide();"> 
-                    <!-- Replace with Next Question -->
-                    <input type = "button" value = "Next" class ="next"  onclick="console.error('Readd this logic!'); showSlides()"> 
-                </div>
-
-                <div style="padding-bottom:100px" class = "mySlides">
-                    <h1 id ="quizSubmissionTitle">Congratulations You're Finished!</h1>
-                    <p id ="quizSubtitle">Click collaborate to add your object to our canvas.</p>
-                    <p id ="codeDisplayTitle">Your Code</p>
-
-                    <div class ="finalCode">
-                        <p id ="codeDisplayCodeType" >two.js</p>
-                        <p id ="codeDisplayNumber" >1<span id = "lineOneQuizCode">Place Holder</span></p>
-                        <p id ="codeDisplayNumber" >2<span id  = "lineTwoQuizCode"></span></p>
-                        <p id ="codeDisplayNumber" >3<span id = "lineThreeQuizCode"></span></p>
-                    </div>
-
-                    <input type = "button" value = "Collaborate" onclick="console.error('Readd this logic!');"> 
-                </div>
-
-            </form>
+    <!-- Create a Canvas -->
+    <div class ="col-md-6" style="background-color:darkred;">
+        <div class="shape-scroll">
+            <h3 id ="preview">Preview</h3>
+            <div id="draw-shapes"></div>
         </div>
+    </div>
 
-        <!-- Create a Canvas -->
-        <div class ="col-md-6">
-            <div class="shape-scroll">
-                <h3 id ="preview">Preview<h3>
-                <div id="draw-shapes"></div>
+    <div class ="col-md-6">
+
+        <!--  Update Progress Bar -->
+        <p id="questionCount">Question <span id ="currentQuestion">1</span>/3</p>
+
+        <div class="w3-light-grey">
+            <div id="myBar" class="w3-container w3-green w3-center" style="width:20%">
             </div>
         </div>
+
+       <!--  Change Object Based off Answers to Quiz Question -->
+        <form id="quiz" name="quiz" class = "slideshow-container">
+
+            <div style="padding-bottom:100px" class = "mySlides">
+
+                <p class = "questions">Upload an Image of Yourself</p>
+                
+                <form id = "action="/action_page.php" accept="image/gif, image/jpeg">
+                    <input type="file" name="pic" id="pic"><br>
+                    <input id="submitImage" type = "button" value = "Submit Image" class ="next"  onclick="console.error('Readd this logic!'); moveForward(); showSlides()">
+                </form>
+
+
+                <!-- Begin Quiz and Go to First Question -->
+           <!--      <input type = "button" value = "Submit Image" class ="next"  onclick="console.error('Readd this logic!'); moveForward(); showSlides()"> -->
+            </div>
+
+
+            <div style="padding-bottom:100px" class = "mySlides">
+                <p class = "questions">What type of environment do you live in?</p>
+                <div class ="options" id="environment">
+                    <div class="answer" id="environment-urban" onclick="updateShapeAttr('environment', 'urban')">Urban<span id="quizCode"><span style="color: blue">Two.Rectangle</span><span>(110, 110, 200, 200);</span></span></div>
+                    <div class="answer" id="environment-rural" onclick="updateShapeAttr('environment', 'rural')">Rural<span id="quizCode"><span style="color: blue">Two.Polygon</span><span>(110, 110, 50, 5);</span></div>
+                    <div class="answer" id="environment-suburban" onclick="updateShapeAttr('environment', 'suburban')">Suburban<span id="quizCode"><span style="color: blue">Two.Ellipse</span><span>(110, 110, 100, 100);</span></div>
+
+                </div>
+
+                <input type = "button" value = "Previous" class ="previous" onclick="console.error('Readd this logic!'); moveBackward(); showPreviousSlide();"> 
+                <!-- Replace with Next Question -->
+                <input type = "button" value = "Next" class ="next"  onclick="console.error('Readd this logic!'); moveForward(); showSlides()"> 
+            </div>
+
+            <div style="padding-bottom:100px" class = "mySlides">
+                <p class = "questions"> What is your affiliation to Red Hat? </p>
+                <div class ="options" id="affiliation">
+                    <div class="answer" id="affiliation-employee" onclick="updateShapeAttr('affiliation', 'employee')">Employee<span id="quizCode"><span style="color: blue">shape.linewidth</span><span> = 2;</span></div>
+                    <div class="answer" id="affiliation-customer" onclick="updateShapeAttr('affiliation', 'customer')">Customer<span id="quizCode"><span style="color: blue">shape.linewidth</span><span> = 3;</span></div>
+                    <div class="answer" id="affiliation-other" onclick="updateShapeAttr('affiliation', 'other')">Other<span id="quizCode"><span style="color: blue">shape.linewidth</span><span>= 6;</span></div>
+                </div>
+
+               <input type = "button" value = "Previous" class ="previous" onclick="console.error('Readd this logic!'); moveBackward(); showPreviousSlide();"> 
+                <!-- Replace with Next Question -->
+                <input type = "button" value = "Next" class ="next"  onclick="console.error('Readd this logic!'); moveForward(); showSlides()"> 
+            </div>
+
+            <div style="padding-bottom:100px" class = "mySlides">
+                <p class = "questions">Which continent are you from?</p>
+                <div class ="options" id="continent">
+                    <div class="answer" id="continent-africa" onclick="updateShapeAttr('continent', 'africa')">Africa<span id="quizCode"><span style="color: blue">Two.Ellipse</span><span>(x, y, width, height);</span></div>
+                    <div class="answer" id="continent-europe" onclick="updateShapeAttr('continent', 'europe')">Europe<span id="quizCode"><span style="color: blue">Two.Ellipse</span><span>(x, y, width, height);</span></div>
+                    <div class="answer" id="continent-asia" onclick="updateShapeAttr('continent', 'asia')">Asia<span id="quizCode"><span style="color: blue">Two.Ellipse</span><span>(x, y, width, height);</span></div>
+                    <div class="answer" id="continent-southamerica" onclick="updateShapeAttr('continent', 'southamerica')">South America<span id="quizCode"><span style="color: blue">Two.Ellipse</span><span>(x, y, width, height);</span></div>
+                    <div class="answer" id="continent-northamerica" onclick="updateShapeAttr('continent', 'northamerica')">North America<span id="quizCode"><span style="color: blue">Two.Ellipse</span><span>(x, y, width, height);</span></div>
+                    <div class="answer" id="continent-australia" onclick="updateShapeAttr('continent', 'australia')">Australia<span id="quizCode"><span style="color: blue">Two.Ellipse</span><span>(x, y, width, height);</span></div>
+                </div>
+
+               <input type = "button" value = "Previous" class ="previous" onclick="console.error('Readd this logic!'); moveBackward(); showPreviousSlide();"> 
+                <!-- Replace with Next Question -->
+                <input type = "button" value = "Next" class ="next"  onclick="console.error('Readd this logic!'); showSlides()"> 
+            </div>
+
+            <div style="padding-bottom:100px" class = "mySlides">
+                <h1 id ="quizSubmissionTitle">Congratulations You're Finished!</h1>
+                <p id ="quizSubtitle">Click collaborate to add your object to our canvas.</p>
+                <p id ="codeDisplayTitle">Your Code</p>
+
+                <div class ="finalCode">
+                    <p id ="codeDisplayCodeType" >two.js</p>
+                    <p id ="codeDisplayNumber" >1<span id = "lineOneQuizCode">Place Holder</span></p>
+                    <p id ="codeDisplayNumber" >2<span id  = "lineTwoQuizCode"></span></p>
+                    <p id ="codeDisplayNumber" >3<span id = "lineThreeQuizCode"></span></p>
+                </div>
+
+                <input type = "button" value = "Collaborate" onclick="console.error('Readd this logic!');"> 
+            </div>
+
+        </form>
 
     </div>
+
 </div>
 
 <!-- Quiz Styling -->
