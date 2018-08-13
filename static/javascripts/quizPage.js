@@ -37,6 +37,7 @@ function renderShapeToCanvas() {
     shape.fill = texture;
     // texture.scale = 0.8;
     shape.linewidth = shapeAttrs.linewidth;
+
     shape.stroke = 'red'; // This is just a default, and we can change it whenever
     canvas.update();
 }
@@ -47,6 +48,7 @@ function answersToAttributes(attr, value) {
         'rural': 'polygon',
         'suburban': 'ellipse'
     }[userAnswers.environment];
+
 
     //User Upload a Picture
     //Set Image to a Variable
@@ -129,16 +131,6 @@ function moveBackward() {
     return false;
 }
 
-// //Show the Code 
-showFinalCode();
-function showFinalCode() {
-
-     document.getElementById("lineOneQuizCode").innerHTML = userAnswers.environment;
-     // document.getElementById("lineTwoQuizCode").innerHTML = document.getElementsByClassName("selected").innerHTML;
-     // document.getElementById("lineThreeQuizCode").innerHTML = document.getElementsByClassName("selected").innerHTML;
-
-}
-
 // // console.log(shape);
 // console.log(userAnswers.environment);
 
@@ -180,4 +172,14 @@ function showPreviousSlide() {
     slides[slideIndex-1].style.display = "block";  
     next[slideIndex-1].className += " active";
     // setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+
+// //Show the Code 
+showFinalCode();
+function showFinalCode() {
+
+     document.getElementById("lineOneQuizCode").innerHTML = value;
+     document.getElementById("lineTwoQuizCode").innerHTML = document.getElementsByClassName("selected").innerHTML;
+     // document.getElementById("lineThreeQuizCode").innerHTML = document.getElementsByClassName("selected").innerHTML;
+
 }

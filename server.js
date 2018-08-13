@@ -20,7 +20,7 @@ app.use(bodyParser.json());
 app.use(express.static(__dirname + '/static'));
 
 // DATABASE
-mongoose.connect('mongodb://localhost/collaboratebycode'); // connect to our database
+mongoose.connect('mongodb://admin:secret@172.30.131.42:27017/collaboratebycode'); // connect to our database
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() { console.log("~ database connected ~"); });
 

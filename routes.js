@@ -10,33 +10,22 @@ router.use(function(req, res, next) {
 	next(); // make sure we go to the next routes and don't stop here
 });
 
-// route for our homepage
+// route for homepage
 router.get('/', function(req, res) {
   res.render('pages/home');
 });
 
-// route for our about page
+// route for about page
 router.get('/about', function(req, res) {
-  var users = [
-    { name: 'Fiona Whittington', email: 'fwhittin@redhat.com', avatar: 'img/fiona.jpg'},
-    { name: 'Grace Colbert', email: 'gcolbert@redhat.com', avatar: 'img/grace.jpg'}
-  ];
-
-  res.render('pages/about', { users: users });
+  res.render('pages/about');
 });
 
-router.get('/contact', function(req, res) {
-  res.render('pages/contact');
-});
-
-router.post('/contact', function(req, res) {
-  res.send('Thanks for contacting us, ' + req.body.name + '! We will respond shortly!');
-});
-
+// route for quiz page
 router.get('/quiz', function(req, res) {
   res.render('pages/quiz');
 });
 
+// route for canvas page
 router.get('/canvas', function(req, res) {
   res.render('pages/canvas');
 });
