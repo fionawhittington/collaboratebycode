@@ -55,4 +55,6 @@ $ oc new-app agreene/collab -e MONGO_USERNAME=<USERNAME> -e MONGO_PASSWORD=<PASS
 
 5. Create a Route for the Collab Deployment
 
-See: https://docs.openshift.com/container-platform/3.3/dev_guide/routes.html
+```bash
+$ oc expose svc/collab
+```
