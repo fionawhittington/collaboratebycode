@@ -1,4 +1,4 @@
-        
+
 // require our dependencies
 var express        = require('express');
 var expressLayouts = require('express-ejs-layouts');
@@ -6,6 +6,10 @@ var bodyParser     = require('body-parser');
 var mongoose       = require('mongoose');
 var app            = express();
 var port           = process.env.PORT || 8080;
+var mongoUsername  = process.env.MONGO_USERNAME;
+var mongoPassword  = process.env.MONGO_PASSWORD;
+var mongoIP  = process.env.MONGO_IP;
+var mongoPORT  = process.env.MONGO_PORT || 27017;
 
 var stream = require('./stream');
 var search = require('./search');
@@ -20,7 +24,7 @@ app.use(bodyParser.json());
 app.use(express.static(__dirname + '/static'));
 
 // DATABASE
-mongoose.connect('mongodb://admin:secret@172.30.131.42:27017/collaboratebycode'); // connect to our database
+mongoose.connect('mongodb://' + mongoUsername + ':' + mongoPassword + '@' + mongoIP + ':' + mongoPORT + '/collaboratebycode'); // connect to our database
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() { console.log("~ database connected ~"); });
 
