@@ -29,7 +29,7 @@ $ docker run -p 27017:27017 --network net --rm --name mongo mongo
 
 2. Deploy the ColLab app
 ```bash
-$ docker run -it -p 8080:8080 -e MONGO_USERNAME=admin -e MONGO_PASSWORD=admin  -e MONGO_IP=mongo --rm --name collab --network net collab
+$ docker run -it -p 8080:8080 -e MONGO_USERNAME=<USERNAME> -e MONGO_PASSWORD=<PASSWORD>  -e MONGO_IP=mongo --rm --name collab --network net collab
 ```
 
 ## Deploying the Application on Openshift
