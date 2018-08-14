@@ -6,7 +6,7 @@ No previous coding experience is necessary to contribute. From designers to writ
 
 ## Deploying the application locally
 
-1. Clone the repo: `https://github.com/fionawhittington/collaboratebycode.git`
+1. Clone the repo: https://github.com/fionawhittington/collaboratebycode.git
 2. Create a mongo database called `collaboratebycode`
 3. Launch App: `node server.js`
 
