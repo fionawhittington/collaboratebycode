@@ -18,8 +18,8 @@ $ docker build -t collab .
 
 2. Tagging collab image and pushing to Docker
 ```bash
-$ docker tag collab {DOCKER_HUB_USERNAME}/collab
-$ docker push {DOCKER_HUB_USERNAME}/collab
+$ docker tag collab <DOCKER_HUB_USERNAME>/collab
+$ docker push <DOCKER_HUB_USERNAME>/collab
 ```
 ## Deploying with Docker
 1. Deploy MongoDB container
